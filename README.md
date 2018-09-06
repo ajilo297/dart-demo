@@ -24,6 +24,7 @@ dart bin/main.dart
 
 Some modules which have been covered in this project are :
 - [Class and constructor](#Person)
+- [Callback methods and implicit interfaces](#Callback)
 
 ### Person
 This class is to demonstrate how easy it is to define a class. One of the most appreciated features is the ability to create named [optional parameters](https://www.dartlang.org/guides/language/language-tour#functions).
@@ -46,4 +47,20 @@ class Person {
 }
 
 enum Gender { MALE, FEMALE }
+```
+
+### Callback
+This demonstrates how to use [Generics](https://www.dartlang.org/guides/language/language-tour#generics) in Dart. Generics are usefull for type safety and helps reduce code duplication.
+
+#### lib/models/callback.dart
+```dart
+abstract class Callback<K, V> {
+  void onSuccess(K response);
+  void onError(V error);
+}
+```
+This is an abstract class that takes in two parameters as `K`, and `V`. I have created a class called StringCallback that specifies `K`, and `V` as `String`.
+#### lib/models/string-callback.dart
+```dart
+abstract class StringCallback implements Callback<String, String> {}
 ```
