@@ -18,14 +18,14 @@ class MainApplication extends Application {
   void addPerson() {
     Person person = Person(
       name: 'Ajil Oommen',
-      emailId: 'ajilo297@outlook.com',
+      emailId: 'ajil@altorumleren.com',
     );
     _personList.add(person);
     person = Person(
-      name: 'Sneha',
-      emailId: 'sneha@altorumleren.com',
-      age: 26,
-      gender: Gender.FEMALE,
+      name: 'Ajoy Oommen',
+      emailId: 'ajoy91ad@gmail.com',
+      age: 27,
+      gender: Gender.MALE,
       weight: 54.0,
     );
     _personList.add(person);
